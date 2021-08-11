@@ -1,0 +1,29 @@
+// Colors
+$brown1: #423818;
+$brown2: #99582A;
+$brown3: #6F1D1B;
+$brown4: #BB9457;
+$brown5: #FFE6A7;
+
+body {
+        margin: 0;
+        //background-image: url("../assets/pexels-toni-cuenca-585750.jpg");
+        background-color: #cccccc;
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-size: cover; 
+        font-family: 'Bebas Neue', cursive;
+}
+
+h2 {
+        margin: 0;
+        text-align: center;
+        font-size: 60px;
+        padding: 20px 0;
+}
+
+* {
+        box-sizing: border-box;
+        transition: all 0.1s linear;
+        color: $brown1;
+}
