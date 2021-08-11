@@ -1,0 +1,84 @@
+$brown1: #423818;
+$brown2: #99582A;
+$brown3: #6F1D1B;
+$brown4: #BB9457;
+$brown5: #FFE6A7;
+
+.CoffeeList {
+    width: 75%;
+    margin: auto;
+    background: $brown4;
+    height: 100%;
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__add-new-button {
+        all: unset;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $brown3;
+        padding: 10px 20px;
+        border-radius: 50vw;
+        font-size: 20px;
+        color: $brown5;
+
+        &:hover {
+            cursor: pointer;
+            background: $brown5;
+            color: $brown3;
+        }
+    }
+
+    &__add-new-popup {
+        position: fixed;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $brown5;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+    }
+}
+
+.AddCoffee {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    &__heading {
+        margin: 0;
+    }
+
+    &__text-field {
+        all: unset;
+        border: 1px solid $brown3;
+        border-radius: 2px;
+    }
+
+    &__file-field {
+        all: unset;
+    }
+
+    &__submit-button {
+        all: unset;
+        width: min-content;
+        background: $brown5;
+        padding: 10px 20px;
+        border-radius: 50vw;
+        font-size: 20px;
+        color: $brown3;
+        align-self: center;
+
+        &:hover {
+            cursor: pointer;
+            background: $brown3;
+            color: $brown5;
+        }
+    }
+}

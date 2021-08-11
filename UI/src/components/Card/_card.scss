@@ -1,0 +1,57 @@
+$brown1: #423818;
+$brown2: #99582A;
+$brown3: #6F1D1B;
+$brown4: #BB9457;
+$brown5: #FFE6A7;
+
+.Card {
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    overflow: hidden;
+    position: relative;
+
+    &__image {
+        width: 100%;
+        height: 75%;
+        object-fit: cover;
+    }
+
+    &__details {
+        flex-direction: column;
+        height: 25%;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        box-sizing: border-box;
+        background: $brown5;
+
+        &__label {
+            font-size: 20px;
+        }
+
+        &__sub-label {
+            font-size: 18px;
+        }
+
+        &__remove-button {
+            all: unset;
+            position: absolute;
+            bottom: 18px;
+            right: 18px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                cursor: pointer;
+                background: $brown4;
+                color: $brown5;
+            }
+        }
+    }
+}
