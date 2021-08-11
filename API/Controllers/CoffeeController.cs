@@ -45,36 +45,7 @@ namespace API.Controllers
 
             return coffee;
         }
-
-        // PUT: api/coffee/148bea3e-39d3-422e-9bfc-4283d501c105
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCoffee(Guid id, Coffee coffee)
-        {
-            if (id != coffee.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(coffee).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CoffeeExists(id))
-                {
-                    return NotFound();
-                }
-                
-                throw;
-            }
-
-            return NoContent();
-        }
-
+        
         // POST: api/coffee
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
@@ -99,10 +70,11 @@ namespace API.Controllers
                 toAdd.ImagePath = filePath;
             }
             
-            _context.Coffees.Add(toAdd);
+            var created = _context.Coffees.Add(toAdd);
+            
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCoffee", new { id = toAdd.Id }, toAdd);
+            return created.Entity;
         }
 
         // DELETE: api/coffee/148bea3e-39d3-422e-9bfc-4283d501c105
@@ -120,12 +92,7 @@ namespace API.Controllers
 
             return NoContent();
         }
-
-        private bool CoffeeExists(Guid id)
-        {
-            return _context.Coffees.Any(e => e.Id == id);
-        }
-
+        
         public class CoffeeFormData
         {
             public string Title { get; set; }
