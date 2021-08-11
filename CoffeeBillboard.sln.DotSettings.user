@@ -1,0 +1,22 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5f812f5b_002D9f5c_002D43f4_002D8311_002Da082c73982c2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a9119d0f_002D5227_002D4d79_002Db53a_002D38127ca3e1fa/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="RetrievesAListOfCoffees #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::BD1B24F9-EA46-4C73-AF00-A79ED4991306::net5.0::API.Tests.CoffeeControllerTests.RetrievesAListOfCoffees&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d433e2cd_002D8715_002D48eb_002D9d45_002Dcbcb816c3da7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="RetrievesAListOfCoffees" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::BD1B24F9-EA46-4C73-AF00-A79ED4991306::net5.0::API.Tests.CoffeeControllerTests.RetrievesAListOfCoffees&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f5ef71fe_002De436_002D4e46_002D904b_002D9475f3f18b5e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="RetrievesAListOfCoffees #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::BD1B24F9-EA46-4C73-AF00-A79ED4991306::net5.0::API.Tests.CoffeeControllerTests.RetrievesAListOfCoffees&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::BD1B24F9-EA46-4C73-AF00-A79ED4991306::net5.0::API.Tests.CoffeeControllerTests.RetrievesACoffee&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::BD1B24F9-EA46-4C73-AF00-A79ED4991306::net5.0::API.Tests.CoffeeControllerTests.CreatesACoffee&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::BD1B24F9-EA46-4C73-AF00-A79ED4991306::net5.0::API.Tests.CoffeeControllerTests.DeletesACoffee&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
