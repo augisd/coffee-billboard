@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -25,14 +23,12 @@ namespace API.Controllers
             _env = env;
         }
 
-        // GET: api/coffee
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Coffee>>> GetCoffees()
         {
             return await _context.Coffees.ToListAsync();
         }
 
-        // GET: api/coffee/148bea3e-39d3-422e-9bfc-4283d501c105
         [HttpGet("{id}")]
         public async Task<ActionResult<Coffee>> GetCoffee(Guid id)
         {
@@ -46,8 +42,6 @@ namespace API.Controllers
             return coffee;
         }
         
-        // POST: api/coffee
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Coffee>> PostCoffee([FromForm] CoffeeFormData data)
         {
@@ -77,7 +71,6 @@ namespace API.Controllers
             return created.Entity;
         }
 
-        // DELETE: api/coffee/148bea3e-39d3-422e-9bfc-4283d501c105
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCoffee(Guid id)
         {
@@ -91,13 +84,6 @@ namespace API.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
-        }
-        
-        public class CoffeeFormData
-        {
-            public string Title { get; set; }
-            public string Price { get; set; }
-            public IFormFile Picture { get; set; }
         }
 
         private static bool IsJpegOrPng(IFormFile file) =>

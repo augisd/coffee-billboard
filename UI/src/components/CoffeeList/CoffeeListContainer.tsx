@@ -8,11 +8,9 @@ interface Props {}
 export const CoffeeListContainer = (props: Props) => {
   const [coffees, setCoffees] = useState<Coffee[]>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [errors, setErrors] = useState<any>(null);
+  const [_, setErrors] = useState<any>(null);
 
   const fetchCoffees = async (): Promise<void> => {
-    console.log("here");
-
     setIsLoading(true);
 
     try {

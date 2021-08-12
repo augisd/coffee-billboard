@@ -18,7 +18,7 @@ export const CoffeeList = (props: Props) => {
       imgSrc={"https://localhost:5001/" + coffee.imagePath}
       label={coffee.title}
       subLabel={String(coffee.price)}
-      onSubmitClick={() => props.onDelete(coffee.id)}
+      onRemoveClick={() => props.onDelete(coffee.id)}
     />
   ));
 

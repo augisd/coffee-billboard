@@ -45,11 +45,7 @@ namespace API
             });
             services.AddControllers();
 
-            services.AddDbContext<CoffeeContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("CoffeeContext")));
-
-            // services.AddDbContext<CoffeeContext>(options =>
-            //     options.UseInMemoryDatabase("CoffeeList"));
+            services.AddDbContext<CoffeeContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
