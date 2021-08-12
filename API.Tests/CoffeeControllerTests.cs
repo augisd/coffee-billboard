@@ -20,10 +20,8 @@ namespace API.Tests
         public CoffeeControllerTests()
         {
             _context = new CoffeeContext(new DbContextOptionsBuilder<CoffeeContext>()
-                .UseInMemoryDatabase(databaseName: "Coffee").Options);
-            _controller = new CoffeeController(_context, new HostingEnvironment());
-            
-            //SeedDb(_context);
+                .UseSqlite("DataSource=:memory:").Options);
+            _controller = new CoffeeController(_context, new HostingEnvironment());            
         }
 
         [Fact]
@@ -87,7 +85,7 @@ namespace API.Tests
             const string title = "Latte";
             
             // Act
-            var result = _controller.PostCoffee(new CoffeeController.CoffeeFormData()
+            var result = _controller.PostCoffee(new CoffeeFormData()
             {
                 Price = price.ToString(CultureInfo.InvariantCulture),
                 Title = title

@@ -1,12 +1,11 @@
 import React from "react";
 import "./_card.scss";
-// import TrashIcon from "../../assets/trash-fill.svg";
 
 interface Props {
   imgSrc: string;
   label: string;
   subLabel: string;
-  onSubmitClick: () => void;
+  onRemoveClick: () => void;
 }
 
 export const Card = (props: Props) => {
@@ -22,7 +21,7 @@ export const Card = (props: Props) => {
       <button
         className="Card__details__remove-button"
         type="button"
-        onClick={() => props.onSubmitClick()}
+        onClick={() => props.onRemoveClick()}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

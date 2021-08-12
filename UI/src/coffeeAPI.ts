@@ -10,7 +10,6 @@ export interface Coffee {
 const instance = axios.create({
   baseURL: "https://localhost:5001/api/",
   timeout: 10000,
-  // headers: {'X-Custom-Header': 'foobar'}
 });
 
 const requests = {
